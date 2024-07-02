@@ -10,7 +10,6 @@ eureka:
   instance:
     hostname: localhost
 
-# enable tracing in the department-service:
 management:
   tracing:
     sampling:

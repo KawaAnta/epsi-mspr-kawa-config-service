@@ -25,12 +25,11 @@ management:
     health:
       show-details: always
 
-# Spring configuration for the PostgreSQL database:
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/order
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://localhost:5432/order
+    username: ${DB-USERNAME}
+    password: ${DB-PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -44,5 +43,5 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: ${RABBIT-USERNAME}
+    password: ${RABBIT-PASSWORD}

@@ -10,7 +10,6 @@ eureka:
   instance:
     hostname: localhost
 
-# enable tracing in the department-service:
 management:
   tracing:
     sampling:
@@ -18,10 +17,11 @@ management:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/product
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://localhost:5432/product
+    username: ${DB-USERNAME}
+    password: ${DB-PASSWORD}
     driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -29,3 +29,9 @@ spring:
     properties:
       hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ${RABBIT-USERNAME}
+    password: ${RABBIT-PASSWORD}
