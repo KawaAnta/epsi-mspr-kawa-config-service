@@ -18,8 +18,8 @@ management:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/user
-    username: ${DB-USERNAME}
-    password: ${DB-PASSWORD}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

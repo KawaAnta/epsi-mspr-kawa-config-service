@@ -18,8 +18,8 @@ management:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/client
-    username: ${DB-USERNAME}
-    password: ${DB-PASSWORD}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -33,5 +33,5 @@ spring:
   rabbitmq:
     host: localhost
     port: 15672
-    username: ${RABBIT-USERNAME}
-    password: ${RABBIT-PASSWORD}
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
